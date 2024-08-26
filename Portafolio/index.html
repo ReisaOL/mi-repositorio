@@ -19,6 +19,79 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
+    <div class="header-text">
+        <p>Autodidact software engineer</p>
+        <h1>Hi, I'm <span>Reisa</span><br> Ogawa from Japan & Colombia</h1>
+    </div>
 </div>
+<!-- ------------------about--------------------- -->
+<div id="about">
+    <div class="container"></div>
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.JPG" class="user">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus architecto voluptatibus provident, molestiae maiores aliquid sit sunt cupiditate at cum enim, dolore magnam quo officiis itaque quasi neque nulla! Expedita.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experiences</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Aug. 2024 - Current</span><br>Autodidactic programming learning<br>プログラミングの独学学習</li>
+                        <li><span>May  2024 - Current</span><br>Planning and drafting of SDGs product development in an industry-academia collaboration project run by Nanzan University's SDGs awareness group: Idea of ​​turning "Kishimen" noodle scraps into clay<br>南山大学SDGs普及啓発団体の産学連携プロジェクトでSDGs商品開発の企画立案:「きしめん」の端材を粘土にするアイデア</li>
+                        <li><span>Oct. 2023 - Mar. 2024</span><br>Long-term internship in a tent manufacturer company: Project management and office matters<br>テントメーカー企業での長期インターンシップ：プロジェクトマネージメントと事務業務</li>
+                        <li><span>Oct. 2023 - Current</span><br>Tourism guide tour in Spanish and English<br>スペイン語と英語による観光ガイドツアー</li>
+                        <li><span>Apr. 2023 - Jun. 2023</span><br>Digital marketing school at CareeZo Marketing School<br>CareeZoマーケティングスクールのデジタルマーケティングスクール</li>
+                        <li><span>Mar. 2019 - Jun. 2019</span><br>Group volunteering at "Coloración Superarse" is a non-profit institution that provides comprehensive care to children and young people who are in a situation of rights vulnerability<br>「Coloración Superarse」でのグループボランティアは権利が侵害される状況にある子どもや若者に総合的なケアを提供する非営利団体です</li>
+                        <li><span>Jan. 2017 - Oct. 2019</span><br>Group research on the characterization of patients with low vision at the San Vicente Fundación University Hospital<br>サンビセンテフンダション病院における低視力患者の特性に関するグループ研究</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Faculty of Global Liberal Studies at Nanzan University<br>南山大学　国際教養学部　国際教養学科</li>
+                        <li><span>2020 - 2022</span><br>CLARK Memorial International High School<br>クラーク記念国際高等学校</li>
+                        <li><span>2009 - 2019</span><br>Universidad Pontificia Bolivariana<br>教皇ボリバル大学 | コロンビア, メデジン　📍</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------services--------------- -->
+<div id="services">
+    <div class>
+<!-- *続き* -->
+
+    </div>
+
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
 </body>
 </html>
